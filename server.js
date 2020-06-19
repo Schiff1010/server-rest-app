@@ -26,9 +26,11 @@ app.get('/', function (req, res) {
 
 //register router
 const users = require('./api/routes/users');
+const posts = require('./api/routes/posts');
 
 // route
 app.use('/users', users);
+app.use('/posts', posts);
 
 // handle 404 error
 app.use(function (req, res, next) {
